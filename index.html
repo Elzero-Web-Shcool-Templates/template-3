@@ -10,12 +10,93 @@
         <link rel="stylesheet" href="style/all.min.css">
         <!-- Main Template CSS File -->
         <link rel="stylesheet" href="style/main.css">
-
+        <!-- Header CSS File -->
+        <link rel="stylesheet" href="style/sections/header.css">
+        <!-- Landing CSS File -->
+        <link rel="stylesheet" href="style/sections/landing.css">
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></head>>Document</title>
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
+        <!-- Start Header -->
+        <header id="header">
+            <div class="container">
+                <a href="#" class="logo">Elzero T2</a>
+                <ul class="main-nav">
+                    <li><a href="#article">Articles</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li>
+                        <a href="#" class="mega-menu-link">Other Links</a>
+                        <div class="mega-menu">
+                            <div class="image"><img src="images/megamenu.webp" alt=""></div>
+                            <ul class="links">
+                                <li><a href="#"><i class="far fa-comments fa-fw"></i> Testimonials</a></li>
+                                <li><a href="#"><i class="far fa-user fa-fw"></i> Team Members</a></li>
+                                <li><a href="#"><i class="far fa-building fa-fw"></i> Services</a></li>
+                                <li><a href="#"><i class="far fa-check-circle fa-fw"></i> Our Skills</a></li>
+                                <li><a href="#"><i class="far fa-clipboard fa-fw"></i> How It Works</a></li>
+                            </ul>
+                            <ul class="links">
+                                <li><a href="#"><i class="far fa-calendar-alt fa-fw"></i> Events</a></li>
+                                <li><a href="#"><i class="fas fa-server fa-fw"></i> Pricing Plans</a></li>
+                                <li><a href="#"><i class="far fa-play-circle fa-fw"></i> Top Videos</a></li>
+                                <li><a href="#"><i class="far fa-chart-bar fa-fw"></i> Stats</a></li>
+                                <li><a href="#"><i class="fas fa-percent fa-fw"></i> Request A Discount</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- End Header -->
+
+        <!-- Start Landing -->
+        <div class="landing">
+            <div class="container">
+                <div class="text">
+                    <h1>Welcome, To Elzero World</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, repudiandae porro consequuntur iure dolore corrupti enim eum, voluptate assumenda incidunt sint cumque ipsum eligendi, obcaecati nesciunt. Possimus ut ducimus omnis?</p>
+                </div>
+                <div class="image">
+                    <img src="images/landing-image.webp" alt="">
+                </div>
+            </div>
+            <a href="#article" class="go-down"><i class="fas fa-angle-double-down fa-2x"></i></a>
+        </div>
+        <!-- End Landing -->
     </body>
+
+    <script>
+        const toggleMenu = document.querySelector(".mega-menu-link");
+        const megaMenu = document.querySelector(".mega-menu");
+        const megaLinks = megaMenu.querySelectorAll("a");
+
+        toggleMenu.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            megaMenu.classList.toggle("open-mega-menu");
+        });
+
+        megaMenu.addEventListener("click", function (e) {
+            e.stopPropagation();
+        });
+
+        document.addEventListener("click", function () {
+            megaMenu.classList.remove("open-mega-menu");
+        });
+
+        window.addEventListener("scroll", function () {
+            megaMenu.classList.remove("open-mega-menu");
+        });
+
+        megaLinks.forEach(link => {
+            link.addEventListener("click", function () {
+                megaMenu.classList.remove("open-mega-menu");
+            });
+        });
+    </script>
+
 </html>

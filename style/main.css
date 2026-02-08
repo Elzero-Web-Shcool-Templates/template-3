@@ -1,6 +1,13 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 :root {
     --main-color: #2196F3;
     --main-color-alt: #1787E0;
+    --transition-duration: 0.3s;
 }
 
 html {
@@ -15,6 +22,10 @@ ul {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 .container {
