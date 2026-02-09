@@ -87,7 +87,7 @@
     }
 }
 
-/* Start Animation */
+/* Animation */
 @keyframes up-and-down {
     0%, 100% {
         top: 0;
