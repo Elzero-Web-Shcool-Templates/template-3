@@ -1,5 +1,5 @@
 header {
-    background-color: white;
+    background-color: var(--background-color);
     position: relative;
     -webkit-box-shadow: 0 0 10px #DDD;
     -moz-box-shadow: 0 0 10px #DDD;
