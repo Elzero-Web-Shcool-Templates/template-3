@@ -97,6 +97,12 @@ header .mega-menu .links {
 
 header .mega-menu .links li {
     position: relative;
+    left: 0;
+    transition: var(--transition-duration);
+}
+
+header .mega-menu .links li:hover {
+    left: 10px;
 }
 
 header .mega-menu .links li:not(:last-child) {
@@ -126,6 +132,11 @@ header .mega-menu .links li a {
     display: block;
     font-size: 18px;
     font-weight: bold;
+    transition: var(--transition-duration);
+}
+
+header .mega-menu .links li:hover a {
+    font-size: 20px;
 }
 
 header .mega-menu .links li a i {
