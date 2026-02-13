@@ -3,7 +3,6 @@
     padding-bottom: var(--section-padding-bottom);
     position: relative;
     background-color: var(--background-color);
-    /* z-index: -3; */
 }
 
 .team .container {
