@@ -135,9 +135,9 @@ header .mega-menu .links li a {
     transition: var(--transition-duration);
 }
 
-header .mega-menu .links li:hover a {
-    /* scale: 1.01; */
-}
+/* header .mega-menu .links li:hover a {
+    scale: 1.01;
+} */
 
 header .mega-menu .links li a i {
     margin-right: 10px;
