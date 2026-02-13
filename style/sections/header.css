@@ -136,7 +136,7 @@ header .mega-menu .links li a {
 }
 
 header .mega-menu .links li:hover a {
-    font-size: 20px;
+    /* scale: 1.01; */
 }
 
 header .mega-menu .links li a i {
