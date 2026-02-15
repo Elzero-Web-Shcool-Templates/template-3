@@ -56,6 +56,10 @@
     flex-basis: 50%;
 }
 
+.discount .form input {
+    border-radius: 6px;
+}
+
 .discount .form .input {
     display: block;
     width: 100%;
@@ -86,6 +90,7 @@
     font-size: 20px;
     cursor: pointer;
     transition: var(--transition-duration);
+    background-color: transparent;
 }
 
 .discount .form input[type=submit]:hover {

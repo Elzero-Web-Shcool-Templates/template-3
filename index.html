@@ -545,27 +545,27 @@
                 <img src="images/skills.webp" alt="">
                 <div class="skills">
                     <div class="skill">
-                        <h3>HTML <span>80%</span></h3>
+                        <h3>HTML <span data-goal="80%">0%</span></h3>
                         <div class="the-progress">
-                            <span style="width: 80%;"></span>
+                            <span style="width: 0%;"></span>
                         </div>
                     </div>
                     <div class="skill">
-                        <h3>CSS <span>85%</span></h3>
+                        <h3>CSS <span data-goal="85%">0%</span></h3>
                         <div class="the-progress">
-                            <span style="width: 85%;"></span>
+                            <span style="width: 0%;"></span>
                         </div>
                     </div>
                     <div class="skill">
-                        <h3>JS <span>70%</span></h3>
+                        <h3>JS <span data-goal="70%">0%</span></h3>
                         <div class="the-progress">
-                            <span style="width: 70%;"></span>
+                            <span style="width: 0%;"></span>
                         </div>
                     </div>
                     <div class="skill">
-                        <h3>Python <span>80%</span></h3>
+                        <h3>Python <span data-goal="80%">0%</span></h3>
                         <div class="the-progress">
-                            <span style="width: 80%;"></span>
+                            <span style="width: 0%;"></span>
                         </div>
                     </div>
                 </div>
@@ -714,24 +714,16 @@
                         <div class="name">
                             Top Videos <i class="fas fa-random"></i>
                         </div>
-                        <ul>
-                            <li>How to Create Subdomain <span>05:18</span></li>
-                            <li>Playint With the DNS <span>03:18</span></li>
-                            <li class="active">Everything About the Virtual Hosts <span>05:25</span></li>
-                            <li>How to Monitor Your Website <span>04:16</span></li>
-                            <li>Uncharted Beating the Last Boss <span>07:48</span></li>
-                            <li>Ys Oath in Felghana Overview <span>03:12</span></li>
-                            <li>Ys Series All Games Ending <span>08:10</span></li>
-                        </ul>
+                        <ul id="videoList"></ul>
                     </div>
                     <div class="preview">
-                        <img src="images/video-preview.webp" alt="">
-                        <div class="info">Everything About the Virtual Hosts</div>
+                        <video id="mainVideo" controls autoplay></video>
+                        <div class="info" id="videoTitle"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Emd Video -->
+        <!-- End Video -->
 
         <div class="spikes"></div>
 
@@ -741,22 +733,22 @@
             <div class="container">
                 <div class="box">
                     <i class="far fa-user fa-2x fa-fw"></i>
-                    <span class="number">300</span>
+                    <span class="number" data-goal="300">0</span>
                     <span class="text">Clients</span>
                 </div>
                 <div class="box">
                     <i class="fas fa-code fa-2x fa-fw"></i>
-                    <span class="number">400</span>
+                    <span class="number" data-goal="400">0</span>
                     <span class="text">Projects</span>
                 </div>
                 <div class="box">
                     <i class="fas fa-globe-asia fa-2x fa-fw"></i>
-                    <span class="number">12</span>
+                    <span class="number" data-goal="12">0</span>
                     <span class="text">Countries</span>
                 </div>
                 <div class="box">
                     <i class="far fa-money-bill-alt fa-2x fa-fw"></i>
-                    <span class="number">500K</span>
+                    <span class="number" data-goal="500000">0</span>
                     <span class="text">Money</span>
                 </div>
             </div>
@@ -839,34 +831,10 @@
         <!-- End Footer -->
     </body>
 
-    <script>
-        const toggleMenu = document.querySelector(".mega-menu-link");
-        const megaMenu = document.querySelector(".mega-menu");
-        const megaLinks = megaMenu.querySelectorAll("a");
-
-        toggleMenu.addEventListener("click", function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-            megaMenu.classList.toggle("open-mega-menu");
-        });
-
-        megaMenu.addEventListener("click", function (e) {
-            e.stopPropagation();
-        });
-
-        document.addEventListener("click", function () {
-            megaMenu.classList.remove("open-mega-menu");
-        });
-
-        window.addEventListener("scroll", function () {
-            megaMenu.classList.remove("open-mega-menu");
-        });
-
-        megaLinks.forEach(link => {
-            link.addEventListener("click", function () {
-                megaMenu.classList.remove("open-mega-menu");
-            });
-        });
-    </script>
+    <script src="js/skills-bar.js"></script>
+    <script src="js/number-increasing.js"></script>
+    <script src="js/video-player.js"></script>
+    <script src="js/mega-menu.js"></script>
+    <script src="js/count-down.js"></script>
 
 </html>
